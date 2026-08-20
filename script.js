@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
-    //  MENÚ DE NAVEGACIÓN MÓVIL
 
+    //  MENÚ DE NAVEGACIÓN MÓVIL
+    
     const mobileToggle = document.getElementById('mobileToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
@@ -107,8 +107,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    //  ANIMACIONES DE PROYECTOS (IntersectionObserver)
-   
+    //  ANIMACIONES DE PROYECTOS 
+
     const projectCards = document.querySelectorAll('.project-card');
 
     if (projectCards.length > 0) {
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    //  BOTÓN "VER MÁS" - FUNCIONAL
+    //  BTN "VER MÁS" 
 
     const viewMoreBtn = document.querySelector('.view-more-btn');
     const projectsGridMore = document.querySelector('.projects-grid-more');
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.classList.add('is-loading');
                 this.innerHTML = '<i class="fas fa-spinner"></i> Cargando...';
 
-                // Simular carga 
+                // Simular carga (puedes quitar el setTimeout si no quieres delay)
                 setTimeout(() => {
                     projectsGridMore.classList.add('is-visible');
                     this.classList.remove('is-loading');
@@ -190,9 +190,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    
     //  EFECTO DE CONTADOR EN HOVER
-
+  
     const counterItems = document.querySelectorAll('.counter-item');
     counterItems.forEach(item => {
         item.addEventListener('mouseenter', function() {
@@ -206,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     //  CERTIFICACIONES CON MODAL
-    
+
     const modal = document.getElementById('certModal');
     const modalBody = document.getElementById('modalBody');
     const modalTitle = document.getElementById('modalTitle');
@@ -306,7 +305,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     //  EFECTO DE APARICIÓN PARA HABILIDADES
-
+    
     const skillItems = document.querySelectorAll('.skill-item-large');
     if (skillItems.length > 0) {
         const skillsObserver = new IntersectionObserver((entries) => {
@@ -356,7 +355,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     //  EFECTO DE APARICIÓN EN EL HERO
-
+   
     const heroElements = document.querySelectorAll('.hero-content > *');
     heroElements.forEach((el, index) => {
         el.style.opacity = '0';
@@ -369,6 +368,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     //  SECCIONES ACTIVAS EN EL NAVBAR AL HACER SCROLL
+
     const sections = document.querySelectorAll('section[id]');
     if (sections.length > 0) {
         const sectionObserver = new IntersectionObserver((entries) => {

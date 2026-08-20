@@ -1,11 +1,17 @@
- /* CONTENEDOR DE PROYECTOS */
+/* ===== PROYECTOS - ESTILOS CORREGIDOS Y FUNCIONALES ===== */
+
+/* ============================================
+   CONTENEDOR DE PROYECTOS
+   ============================================ */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 2rem;
 }
 
-/* TARJETA DE PROYECTO - BASE */
+/* ============================================
+   TARJETA DE PROYECTO - BASE
+   ============================================ */
 .project-card {
     background: var(--bg-card);
     border-radius: 16px;
@@ -32,7 +38,9 @@
     border-color: var(--primary);
 }
 
-/* EFECTO DE BRILLO EN EL BORDE (::before) */
+/* ============================================
+   EFECTO DE BRILLO EN EL BORDE (::before)
+   ============================================ */
 .project-card::before {
     content: '';
     position: absolute;
@@ -52,7 +60,9 @@
     opacity: 0.15;
 }
 
-/*  BADGE "DESTACADO" */
+/* ============================================
+   BADGE "DESTACADO"
+   ============================================ */
 .project-badge {
     position: absolute;
     top: 15px;
@@ -74,6 +84,9 @@
     50% { transform: scale(1.08); }
 }
 
+/* ============================================
+   IMAGEN DEL PROYECTO
+   ============================================ */
 .project-image {
     height: 200px;
     background: var(--bg-secondary);
@@ -116,7 +129,9 @@
     transform: scale(1.15);
 }
 
-/* CUERPO DE LA TARJETA */
+/* ============================================
+   CUERPO DE LA TARJETA
+   ============================================ */
 .project-body {
     padding: 1.8rem;
 }
@@ -153,7 +168,9 @@
     line-height: 1.6;
 }
 
-/* TAGS DE TECNOLOGÍAS */
+/* ============================================
+   TAGS DE TECNOLOGÍAS
+   ============================================ */
 .project-tags {
     display: flex;
     flex-wrap: wrap;
@@ -181,7 +198,9 @@
     background: rgba(0, 255, 65, 0.05);
 }
 
-/*  ENLACES (Código / Demo) */
+/* ============================================
+   ENLACES (Código / Demo)
+   ============================================ */
 .project-links {
     display: flex;
     gap: 1rem;
@@ -213,7 +232,9 @@
     transform: scale(1.2);
 }
 
-/* CONTADOR DE PROYECTOS  */
+/* ============================================
+   CONTADOR DE PROYECTOS
+   ============================================ */
 .projects-counter {
     display: flex;
     gap: 2rem;
@@ -261,7 +282,9 @@
     font-weight: 500;
 }
 
-/* BTN "VER MÁS" */
+/* ============================================
+   BOTÓN "VER MÁS" - FUNCIONAL
+   ============================================ */
 .view-more-container {
     text-align: center;
     margin-top: 3rem;
@@ -331,7 +354,9 @@
     to { transform: rotate(360deg); }
 }
 
-/* PROYECTOS ADICIONALES (Ocultos inicialmente) */
+/* ============================================
+   PROYECTOS ADICIONALES (Ocultos inicialmente)
+   ============================================ */
 .projects-grid-more {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -348,7 +373,9 @@
     opacity: 1;
 }
 
-/* EFECTO DE SEGUIMIENTO DEL MOUSE  */
+/* ============================================
+   EFECTO DE SEGUIMIENTO DEL MOUSE (opcional)
+   ============================================ */
 .project-card {
     --mouse-x: 50%;
     --mouse-y: 50%;
@@ -385,6 +412,9 @@
     z-index: 2;
 }
 
+/* ============================================
+   RESPONSIVE
+   ============================================ */
 @media (max-width: 968px) {
     .projects-grid,
     .projects-grid-more {

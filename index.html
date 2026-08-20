@@ -10,40 +10,104 @@
     <link rel="stylesheet" href="proyectos.css">
     <link rel="stylesheet" href="certificacion.css">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M17 3.34a10 10 0 1 1 -15 8.66l.005 -.324a10 10 0 0 1 14.995 -8.336m-3.658 5.22a1 1 0 0 0 -1.282 .598l-2 5.5a1 1 0 0 0 1.88 .684l2 -5.5a1 1 0 0 0 -.598 -1.282m-4.135 1.233a1 1 0 0 0 -1.414 0l-1.5 1.5a1 1 0 0 0 0 1.414l1.5 1.5a1 1 0 0 0 1.414 0l.083 -.094a1 1 0 0 0 -.083 -1.32l-.792 -.793l.792 -.793a1 1 0 0 0 0 -1.414m7 0a1 1 0 0 0 -1.414 0l-.083 .094a1 1 0 0 0 .083 1.32l.792 .793l-.792 .793a1 1 0 0 0 1.414 1.414l1.5 -1.5a1 1 0 0 0 0 -1.414z'/%3E%3C/svg%3E">
+<base target="_blank">
 </head>
 
 <body>
 
+    <!-- Floating Background Elements -->
+    <div class="floating-elements">
+        <div class="floating-circle"></div>
+        <div class="floating-circle"></div>
+        <div class="floating-circle"></div>
+    </div>
+
     <!-- NAVBAR -->
-   <!-- Floating Background Elements -->
-<div class="floating-elements">
-    <div class="floating-circle"></div>
-    <div class="floating-circle"></div>
-    <div class="floating-circle"></div>
-</div>
+    <nav class="navbar-container">
+        <div class="navbar">
+            <a href="#hero" class="navbar-brand">
+                <div class="logo-icon"></div>
+                <span class="brand-text">Alejandro<span>.</span>Dev</span>
+            </a>
+            <ul class="navbar-nav" id="navbarNav">
+                <li class="nav-item">
+                    <a href="#hero" class="nav-link active">
+                        <svg class="nav-icon" viewBox="0 0 24 24">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9,22 9,12 15,12 15,22"/>
+                        </svg>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#proyectos" class="nav-link">
+                        <svg class="nav-icon" viewBox="0 0 24 24">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 3h6v4"/>
+                            <path d="m22 7-10-4-10 4"/>
+                        </svg>
+                        <span>Proyectos</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#habilidades" class="nav-link">
+                        <svg class="nav-icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="16" x2="12" y2="12"/>
+                            <line x1="12" y1="8" x2="12.01" y2="8"/>
+                        </svg>
+                        <span>Habilidades</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#certificaciones" class="nav-link">
+                        <svg class="nav-icon" viewBox="0 0 24 24">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                        </svg>
+                        <span>Certificaciones</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contacto" class="cta-button">
+                        <i class="fas fa-paper-plane"></i> Contáctame
+                    </a>
+                </li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </nav>
 
-<nav class="navbar-container">
-    <div class="navbar">
-        <!-- Brand/Logo -->
-        <a href="#hero" class="navbar-brand">
-            <div class="logo-icon"></div>
-            <span class="brand-text">Alejandro<span>.</span>Dev</span>
-        </a>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
 
-        <!-- Navigation Links -->
-        <ul class="navbar-nav" id="navbarNav">
-            <li class="nav-item">
-                <a href="#hero" class="nav-link active">
-                    <svg class="nav-icon" viewBox="0 0 24 24">
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <a href="#hero" class="mobile-menu-brand">
+                <div class="logo-icon"></div>
+                <span class="brand-text">Alejandro<span>.</span>Dev</span>
+            </a>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <span>&times;</span>
+            </button>
+        </div>
+        <ul class="mobile-menu-nav">
+            <li class="mobile-menu-item">
+                <a href="#hero" class="mobile-menu-link active">
+                    <svg class="mobile-menu-icon" viewBox="0 0 24 24">
                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                         <polyline points="9,22 9,12 15,12 15,22"/>
                     </svg>
                     <span>Home</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="#proyectos" class="nav-link">
-                    <svg class="nav-icon" viewBox="0 0 24 24">
+            <li class="mobile-menu-item">
+                <a href="#proyectos" class="mobile-menu-link">
+                    <svg class="mobile-menu-icon" viewBox="0 0 24 24">
                         <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
                         <path d="M16 3h6v4"/>
                         <path d="m22 7-10-4-10 4"/>
@@ -51,9 +115,9 @@
                     <span>Proyectos</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="#habilidades" class="nav-link">
-                    <svg class="nav-icon" viewBox="0 0 24 24">
+            <li class="mobile-menu-item">
+                <a href="#habilidades" class="mobile-menu-link">
+                    <svg class="mobile-menu-icon" viewBox="0 0 24 24">
                         <circle cx="12" cy="12" r="10"/>
                         <line x1="12" y1="16" x2="12" y2="12"/>
                         <line x1="12" y1="8" x2="12.01" y2="8"/>
@@ -61,102 +125,30 @@
                     <span>Habilidades</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="#certificaciones" class="nav-link">
-                    <svg class="nav-icon" viewBox="0 0 24 24">
+            <li class="mobile-menu-item">
+                <a href="#certificaciones" class="mobile-menu-link">
+                    <svg class="mobile-menu-icon" viewBox="0 0 24 24">
                         <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
                     </svg>
                     <span>Certificaciones</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="#contacto" class="cta-button">
-                    <i class="fas fa-paper-plane"></i> Contáctame
+            <li class="mobile-menu-item">
+                <a href="#contacto" class="mobile-menu-link">
+                    <svg class="mobile-menu-icon" viewBox="0 0 24 24">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    <span>Contacto</span>
                 </a>
             </li>
         </ul>
-
-        <!-- Mobile Toggle -->
-        <button class="mobile-toggle" id="mobileToggle">
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </button>
+        <div class="mobile-cta">
+            <a href="#contacto" class="mobile-cta-button">
+                <i class="fas fa-paper-plane"></i> Contáctame
+            </a>
+        </div>
     </div>
-</nav>
-
-<!-- Mobile Menu Overlay -->
-<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
-
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-menu-header">
-        <a href="#hero" class="mobile-menu-brand">
-            <div class="logo-icon"></div>
-            <span class="brand-text">Alejandro<span>.</span>Dev</span>
-        </a>
-        <button class="mobile-menu-close" id="mobileMenuClose">
-            <span>×</span>
-        </button>
-    </div>
-    
-    <ul class="mobile-menu-nav">
-        <li class="mobile-menu-item">
-            <a href="#hero" class="mobile-menu-link active">
-                <svg class="mobile-menu-icon" viewBox="0 0 24 24">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                    <polyline points="9,22 9,12 15,12 15,22"/>
-                </svg>
-                <span>Home</span>
-            </a>
-        </li>
-        <li class="mobile-menu-item">
-            <a href="#proyectos" class="mobile-menu-link">
-                <svg class="mobile-menu-icon" viewBox="0 0 24 24">
-                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-                    <path d="M16 3h6v4"/>
-                    <path d="m22 7-10-4-10 4"/>
-                </svg>
-                <span>Proyectos</span>
-            </a>
-        </li>
-        <li class="mobile-menu-item">
-            <a href="#habilidades" class="mobile-menu-link">
-                <svg class="mobile-menu-icon" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="10"/>
-                    <line x1="12" y1="16" x2="12" y2="12"/>
-                    <line x1="12" y1="8" x2="12.01" y2="8"/>
-                </svg>
-                <span>Habilidades</span>
-            </a>
-        </li>
-        <li class="mobile-menu-item">
-            <a href="#certificaciones" class="mobile-menu-link">
-                <svg class="mobile-menu-icon" viewBox="0 0 24 24">
-                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                </svg>
-                <span>Certificaciones</span>
-            </a>
-        </li>
-        <li class="mobile-menu-item">
-            <a href="#contacto" class="mobile-menu-link">
-                <svg class="mobile-menu-icon" viewBox="0 0 24 24">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                    <polyline points="22,6 12,13 2,6"/>
-                </svg>
-                <span>Contacto</span>
-            </a>
-        </li>
-    </ul>
-    
-    <div class="mobile-cta">
-        <a href="#contacto" class="mobile-cta-button">
-            <i class="fas fa-paper-plane"></i> Contáctame
-        </a>
-    </div>
-</div>
 
     <!-- HERO -->
     <section id="hero">
@@ -167,7 +159,7 @@
                 <p class="subtitle">Full Stack Developer</p>
                 <p class="bio">
                     Construyo aplicaciones web escalables y experiencias digitales memorables.
-                    Especializado en <strong style="color: var(--primary);">Laravel </strong>.
+                    Especializado en <strong style="color: var(--primary);">Laravel</strong>.
                 </p>
                 <div class="hero-badges">
                     <span class="badge"><i class="fas fa-code"></i></span>
@@ -183,195 +175,209 @@
                     </a>
                 </div>
             </div>
-          <div class="hero-avatar">
-    <div class="avatar-circle">
-        <img src="img/Portafolio.png" alt="Alejandro Montenegro - Full Stack Developer">
-    </div>
-</div>
+            <div class="hero-avatar">
+                <div class="avatar-circle">
+                    <img src="img/Portafolio.png" alt="Alejandro Montenegro - Full Stack Developer">
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- PROYECTOS -->
-   <!-- ═══════════════════════════════════════════════════════ -->
-<!--  SECCIÓN PROYECTOS - ESTRUCTURA CORREGIDA              -->
-<!--  Reemplaza tu sección #proyectos actual con esto       -->
-<!-- ═══════════════════════════════════════════════════════ -->
+    <section id="proyectos" style="background: var(--bg-secondary); padding: 6rem 0;">
+        <div class="container">
+            <h2 class="section-title">Proyectos <span class="highlight">Destacados</span></h2>
+            <p class="section-subtitle">Algunos de los proyectos que he desarrollado recientemente</p>
 
-<section id="proyectos" style="background: var(--bg-secondary); padding: 6rem 0;">
-    <div class="container">
-        <h2 class="section-title">Proyectos <span class="highlight">Destacados</span></h2>
-        <p class="section-subtitle">Algunos de los proyectos que he desarrollado recientemente</p>
+            <!-- Proyectos visibles inicialmente -->
+            <div class="projects-grid">
 
-        <!-- Proyectos visibles inicialmente -->
-        <div class="projects-grid">
-
-            <!-- Proyecto 1: Cow Farm -->
-            <div class="project-card" data-delay="0">
-                <span class="project-badge">⭐ Destacado</span>
-                <div class="project-image">
-                    <span class="project-icon">
-                        <img src="img/Logo_Cow_Farm_SGDB.png" alt="Logo SGDB Cow Farm">
-                    </span>
+                <!-- Proyecto 1: Cow Farm -->
+                <div class="project-card" data-delay="0">
+                    <span class="project-badge">⭐ Destacado</span>
+                    <div class="project-image">
+                        <span class="project-icon">
+                            <img src="img/Logo_Cow_Farm_SGDB.png" alt="Logo SGDB Cow Farm">
+                        </span>
+                    </div>
+                    <div class="project-body">
+                        <h3>SGDB-Cow Farm</h3>
+                        <p>Plataforma de gestión de bovinos con seguimiento de producción, salud y reproducción.</p>
+                        <div class="project-tags">
+                            <span>Laravel</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                            <span>API REST</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/JAMLizca/Cow-Farm-SGDB" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-body">
-                    <h3>SGDB-Cow Farm</h3>
-                    <p>Plataforma de gestión de bovinos con seguimiento de producción, salud y reproducción.</p>
-                    <div class="project-tags">
-                        <span>Laravel</span>
-                        <span>MySQL</span>
-                        <span>JavaScript</span>
-                        <span>API REST</span>
+
+                <!-- Proyecto 2 -->
+                <div class="project-card" data-delay="150">
+                    <div class="project-image">
+                        <span class="project-icon">🚀</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/JAMLizca/Cow-Farm-SGDB" target="_blank" rel="noopener">
-                            <i class="fab fa-github"></i> Código
-                        </a>
-                        <a href="#" target="_blank" rel="noopener">
-                            <i class="fas fa-external-link-alt"></i> Demo
-                        </a>
+                    <div class="project-body">
+                        <h3>Próximo Proyecto</h3>
+                        <p>Espacio reservado para tu próximo proyecto destacado. ¡Actualiza esta tarjeta!</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
                     </div>
+                </div>
+
+            </div>
+
+            <!-- Proyectos adicionales (ocultos inicialmente) -->
+            <div class="projects-grid-more">
+
+                <!-- Proyecto 3 -->
+                <div class="project-card" data-delay="0">
+                    <div class="project-image">
+                        <span class="project-icon">💼</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Sistema de Inventario</h3>
+                        <p>Gestión de inventario con reportes automáticos y control de stock en tiempo real.</p>
+                        <div class="project-tags">
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>Bootstrap</span>
+                            <span>jQuery</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 4 -->
+                <div class="project-card" data-delay="150">
+                    <div class="project-image">
+                        <span class="project-icon">📊</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Dashboard Analytics</h3>
+                        <p>Panel de control con visualización de datos y métricas de rendimiento.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>Chart.js</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 5 -->
+                <div class="project-card" data-delay="300">
+                    <div class="project-image">
+                        <span class="project-icon">🛒</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>E-Commerce API</h3>
+                        <p>API RESTful para plataforma de comercio electrónico con pasarela de pagos.</p>
+                        <div class="project-tags">
+                            <span>Laravel</span>
+                            <span>MySQL</span>
+                            <span>Stripe</span>
+                            <span>Redis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 6 -->
+                <div class="project-card" data-delay="450">
+                    <div class="project-image">
+                        <span class="project-icon">🔐</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Auth Microservice</h3>
+                        <p>Microservicio de autenticación con JWT, roles y permisos granular.</p>
+                        <div class="project-tags">
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>JWT</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Contador de proyectos -->
+            <div class="projects-counter">
+                <div class="counter-item">
+                    <span class="number">6</span>
+                    <span class="label">Proyectos Completados</span>
+                </div>
+                <div class="counter-item">
+                    <span class="number">3</span>
+                    <span class="label">En Producción</span>
+                </div>
+                <div class="counter-item">
+                    <span class="number">1</span>
+                    <span class="label">Open Source</span>
                 </div>
             </div>
 
-            <!-- Proyecto 2 -->
-            <div class="project-card" data-delay="150">
-                <div class="project-image">
-                    <span class="project-icon">🚀</span>
-                </div>
-                <div class="project-body">
-                    <h3>Próximo Proyecto</h3>
-                    <p>Espacio reservado para tu próximo proyecto destacado. ¡Actualiza esta tarjeta!</p>
-                    <div class="project-tags">
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
-                        <span>Docker</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#"><i class="fab fa-github"></i> Código</a>
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-                    </div>
-                </div>
+            <!-- Botón Ver Más -->
+            <div class="view-more-container">
+                <button class="view-more-btn" type="button">
+                    Ver todos los proyectos <i class="fas fa-arrow-right"></i>
+                </button>
             </div>
 
         </div>
-
-        <!-- Proyectos adicionales (ocultos inicialmente) -->
-        <div class="projects-grid-more">
-
-            <!-- Proyecto 3 -->
-            <div class="project-card" data-delay="0">
-                <div class="project-image">
-                    <span class="project-icon">💼</span>
-                </div>
-                <div class="project-body">
-                    <h3>Sistema de Inventario</h3>
-                    <p>Gestión de inventario con reportes automáticos y control de stock en tiempo real.</p>
-                    <div class="project-tags">
-                        <span>PHP</span>
-                        <span>MySQL</span>
-                        <span>Bootstrap</span>
-                        <span>jQuery</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#"><i class="fab fa-github"></i> Código</a>
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Proyecto 4 -->
-            <div class="project-card" data-delay="150">
-                <div class="project-image">
-                    <span class="project-icon">📊</span>
-                </div>
-                <div class="project-body">
-                    <h3>Dashboard Analytics</h3>
-                    <p>Panel de control con visualización de datos y métricas de rendimiento.</p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>Flask</span>
-                        <span>Chart.js</span>
-                        <span>PostgreSQL</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#"><i class="fab fa-github"></i> Código</a>
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Proyecto 5 -->
-            <div class="project-card" data-delay="300">
-                <div class="project-image">
-                    <span class="project-icon">🛒</span>
-                </div>
-                <div class="project-body">
-                    <h3>E-Commerce API</h3>
-                    <p>API RESTful para plataforma de comercio electrónico con pasarela de pagos.</p>
-                    <div class="project-tags">
-                        <span>Laravel</span>
-                        <span>MySQL</span>
-                        <span>Stripe</span>
-                        <span>Redis</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#"><i class="fab fa-github"></i> Código</a>
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Proyecto 6 -->
-            <div class="project-card" data-delay="450">
-                <div class="project-image">
-                    <span class="project-icon">🔐</span>
-                </div>
-                <div class="project-body">
-                    <h3>Auth Microservice</h3>
-                    <p>Microservicio de autenticación con JWT, roles y permisos granular.</p>
-                    <div class="project-tags">
-                        <span>Node.js</span>
-                        <span>Express</span>
-                        <span>JWT</span>
-                        <span>Docker</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#"><i class="fab fa-github"></i> Código</a>
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Contador de proyectos -->
-        <div class="projects-counter">
-            <div class="counter-item">
-                <span class="number">6</span>
-                <span class="label">Proyectos Completados</span>
-            </div>
-            <div class="counter-item">
-                <span class="number">3</span>
-                <span class="label">En Producción</span>
-            </div>
-            <div class="counter-item">
-                <span class="number">1</span>
-                <span class="label">Open Source</span>
-            </div>
-        </div>
-
-        <!-- Botón Ver Más -->
-        <div class="view-more-container">
-            <button class="view-more-btn" type="button">
-                Ver todos los proyectos <i class="fas fa-arrow-right"></i>
-            </button>
-        </div>
-
-    </div>
-</section>
-
-  <!-- HABILIDADES -->
+    </section>
+<!-- HABILIDADES -->
 <section id="habilidades">
     <div class="container">
         <h2 class="section-title">Habilidades <span class="highlight">Técnicas</span></h2>
@@ -602,5 +608,7 @@
             <p>© 2026 Alejandro Montenegro · Backend Developer · Hecho con <i class="fas fa-heart"></i></p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
